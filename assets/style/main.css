@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+  background-color: #EFDFBB;
+  color:#FFF;
+  font-family: 'Raleway', sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+h1 {
+  text-align: center;
+    letter-spacing: 9px;
+}
+
+
+#app {
+  width:90%;
+   min-width: 430px;
+  margin: auto;
+  text-align: left;
+}
+
+.show {
+ color: #EFDFBB;
+ width: 45px;
+ height: 45px;
+ border-radius: 100%;
+ background-color: #fff;
+ margin:auto;
+}
+
+.show:before {
+content: '+';
+position: relative;
+font-size: 70px;
+top: -18px;
+left: 8px;
+}
+
+#reveal #form-group {
+  opacity: 0;
+  text-align: center;
+  margin: 10px auto;
+  height: 0px;
+  overflow: hidden;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#reveal:hover #form-group {
+ opacity: 1;
+ height: auto;
+
+}
+
+input {
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+input, #form-group button{
+  height: 30px;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 5px;
+
+ background-color: #fff;
+ 
+ font-weight: bold;
+ border: 1px dashed #E3A857;
+ color: #E3A857;
+}
+#form-group button {
+  height: 35px;
+  width: 59px;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+#form-group button:hover {
+  height: 35px;
+  width: 59px;
+  font-family: 'Raleway', sans-serif;
+  background-color: #E3A857;
+ border: 1px dashed #FFF;
+ color: #FFF;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+
+  display: block;
+
+    overflow: hidden;
+  text-align: center;
+  border-bottom: 1px solid #F8DE7E;
+  padding:10px;
+  height: 20px;
+  background: #fff;
+  color:#E3A857;
+  margin-bottom: 3px;
+  -webkit-transition: -webkit-all 0.5s cubic-bezier(.25,.1,.25,1);
+  transition: all 0.5s cubic-bezier(.25,.1,.25,1);
+}
+
+li:hover {
+  height: 80px;
+
+}
+
+li .item-actions {
+  opacity: 0;
+  padding-top: 10px;
+ 
+} 
+
+li .item-actions button {
+ width:50px;
+ height: 50px;
+ border-radius: 100%;
+ background-color: #fff;
+ font-size: 20px;
+ font-weight: bold;
+ border: 1px dashed #E3A857;
+ color: #E3A857;
+ }
+
+ li .item-actions button:hover {
+
+ background-color: #E3A857;
+ border: 1px dashed #FFF;
+ color: #FFF;
+ }
+
+li:hover .item-actions {
+  opacity: 1;
+} 
+
+li .bought:after {
+  content: '✓';
+
+}
+
+.active .bought:after {
+  color:red;
+}
+
+.active {
+  
+  opacity: 0.4;
+}
+
+

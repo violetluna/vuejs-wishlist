@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TEST CSS</title>
+	
+	<!-- [ STYLE ] -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/style/main.css">
+
+</head>
+
+<body>
+
+<h1>WISHLIST WITH VUE.JS</h1>
+
+<div id="app">
+
+  <!-- ADD ITEM -->
+  
+	<div id="reveal">
+
+		<div class="show"></div>
+
+		<div id="form-group">
+
+	  		<input
+	    	v-model="newItemName"
+	    	placeholder="Name"
+	  		>
+
+	  		<input
+	    	v-model="newItemLink"
+	    	placeholder="url to buy"
+	  		>
+
+	  		<button v-on:click="addItem">+</button>
+	  	</div>
+  		
+
+	</div>
+
+  <!-- ADD ITEM -->
+
+  <!-- RENDER ITEM -->
+
+   	<ul>
+    	<wishlist-item 
+    	v-for="(item,index) in wishlist" 
+    	v-bind:wishlist="item" 
+    	v-on:remove="wishlist.splice(index, 1)" 
+    	v-on:check="toggleActive(index)" 
+    	v-bind:class="{ active : item.isActive}">
+		</wishlist-item>
+  	</ul>
+
+  <!-- RENDER ITEM -->
+
+
+</div>
+
+
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="assets/js/app.js"></script>
+
+</body>
+</html>
